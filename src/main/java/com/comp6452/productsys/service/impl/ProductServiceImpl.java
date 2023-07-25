@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author Weizhe Pan
@@ -22,9 +24,11 @@ public class ProductServiceImpl  extends ServiceImpl<ProductMapper, Product> imp
     private ProductMapper productMapper;
 
     @Override
-    public Product getProductById(Integer productId) {
+    public List<Product> getProductById(Integer productId) {
         Product product=this.getById(productId);
-        return product;
+        List<Product> productList=new ArrayList<Product>();
+        productList.add(product);
+        return productList;
     }
 
     @Override

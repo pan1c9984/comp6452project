@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author Weizhe Pan
@@ -19,7 +20,7 @@ public class ProductController {
     private ProductService productService;
 
     @GetMapping("/getProductById")
-    public Product getProductById(@RequestParam (value = "productId")Integer productId){
+    public List<Product> getProductById(@RequestParam (value = "productId")Integer productId){
         return productService.getProductById(productId);
     }
 

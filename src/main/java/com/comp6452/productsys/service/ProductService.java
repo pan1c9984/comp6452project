@@ -20,7 +20,7 @@ public interface ProductService extends IService<Product> {
     * @Author: Weizhe Pan
     * @Date: 2023/7/25
     */
-    Product getProductById(Integer productId);
+    List<Product> getProductById(Integer productId);
 
     /**
     * @Description:
